@@ -2,8 +2,9 @@
   "$schema": "https://json.schemastore.org/tsconfig",
 
   "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["esnext"],
     "moduleResolution": "Node",
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -15,12 +16,12 @@
     "noUnusedParameters": true,
     "strict": true,
     "useUnknownInCatchVariables": true,
-    "baseUrl": "./",
     "resolveJsonModule": true,
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": false
+    "experimentalDecorators": false,
+    "types": ["node", "vite/client"]
   }
 }

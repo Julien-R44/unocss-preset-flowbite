@@ -1,0 +1,53 @@
+{
+  "name": "@julr/unocss-preset-flowbite",
+  "version": "0.0.1-beta.0",
+  "packageManager": "pnpm@7.5.0",
+  "description": "💅 An adaptation of the Flowbite Tailwind plugin for UnoCSS",
+  "keywords": [
+    "unocss",
+    "unocss-preset",
+    "flowbite",
+    "headless"
+  ],
+  "homepage": "https://github.com/Julien-R44/unocss-preset-flowbite#readme",
+  "bugs": {
+    "url": "https://github.com/Julien-R44/unocss-preset-flowbite/issues"
+  },
+  "license": "MIT",
+  "author": "Julien Ripouteau <julien@ripouteau.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julien-R44/unocss-preset-flowbite.git"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub"
+  },
+  "peerDependencies": {
+    "unocss": ">= 0.31.13 < 1"
+  },
+  "dependencies": {
+    "mini-svg-data-uri": "^1.4.4"
+  },
+  "devDependencies": {
+    "unbuild": "^0.7.4",
+    "unocss": "^0.43.0",
+    "vite": "^2.9.13"
+  }
+}

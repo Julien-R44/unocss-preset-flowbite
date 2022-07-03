@@ -1,5 +1,5 @@
 {
-  "name": "@julr/unocss-preset-flowbite",
+  "name": "@julr/unocss-preset-flowbite-monorepo",
   "version": "0.0.1-beta.0",
   "packageManager": "pnpm@7.5.0",
   "description": "💅 An adaptation of the Flowbite Tailwind plugin for UnoCSS",
@@ -9,32 +9,8 @@
     "flowbite",
     "headless"
   ],
-  "homepage": "https://github.com/Julien-R44/unocss-preset-flowbite#readme",
-  "bugs": {
-    "url": "https://github.com/Julien-R44/unocss-preset-flowbite/issues"
-  },
   "license": "MIT",
   "author": "Julien Ripouteau <julien@ripouteau.com>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Julien-R44/unocss-preset-flowbite.git"
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "build": "rimraf dist && unbuild",
     "dev": "unbuild --stub",
@@ -43,15 +19,11 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp --commit --push --tag && pnpm publish"
   },
-  "peerDependencies": {
-    "unocss": ">= 0.31.13 < 1"
-  },
   "devDependencies": {
     "@julr/eslint-config": "^0.3.0",
     "@types/node": "^18.0.0",
     "bumpp": "^8.2.1",
     "eslint": "^8.19.0",
-    "mini-svg-data-uri": "^1.4.4",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "typescript": "^4.7.4",
@@ -73,7 +45,8 @@
     "extends": "@julr",
     "rules": {
       "n/no-unsupported-features/es-syntax": "off",
-      "n/no-missing-import": "off"
+      "n/no-missing-import": "off",
+      "n/no-unpublished-import": "off"
     }
   }
 }
