@@ -15,7 +15,7 @@ export function presetFlowbite(): Preset {
           const baseFontSize = theme.fontSize.base[0]
           const baseLineHeight = theme.fontSize.base[1]
 
-          return `
+          const baseInput = `
             [type='text'],
             [type='email'],
             [type='url'],
@@ -70,7 +70,9 @@ export function presetFlowbite(): Preset {
               box-shadow: var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);
               border-color: ${theme.colors.blue['600']};
             }
+          `
 
+          const select = `
             select {
               background-image: url("${svgToDataUri(
                 `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20"><path stroke="${theme.colors.gray['500']}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4"/></svg>`
@@ -81,7 +83,9 @@ export function presetFlowbite(): Preset {
               padding-right: ${spacing[10]};
               print-color-adjust: exact;
             }
+          `
 
+          const checkboxRadios = `
             [type="checkbox"], [type="radio"] {
               appearance: none;
               padding: 0;
@@ -127,6 +131,25 @@ export function presetFlowbite(): Preset {
               background-repeat: no-repeat;
             }
           `
+
+          /**
+           * I wanted to make a rule to handle the "content-['']" class ( since UnoCSS handle it like
+           * that : 'content-empty' ) but it doesn't seems to be possible. That kind of dynamic rule isn't working :
+           * [/^content-\['(.*)'\]$/, ([, v]) => ({ content: `"${v ? v : ''}"` })],
+           *
+           * So the workaround is just to inject directly the class content-['']
+           */
+          const emptyContentMonkeyPatch = `
+            .content-\\[\\'\\'\\] {
+              content: '';
+            }
+            
+            .after\\:content-\\[\\'\\'\\]::after {
+              content: '';
+            }
+          `
+
+          return [baseInput, select, checkboxRadios, emptyContentMonkeyPatch].join('\n')
         },
       },
     ],
