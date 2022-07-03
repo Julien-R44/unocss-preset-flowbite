@@ -1,6 +1,6 @@
 import type { Preset } from 'unocss'
 import { getBaseStyle } from './base_style'
-import { generateAlertShortcuts } from './shortcuts'
+import * as shortcuts from './shortcuts'
 
 export interface PresetFlowbiteOptions {
   /**
@@ -14,12 +14,14 @@ export interface PresetFlowbiteOptions {
  * WIP / Doesn't support all functionality yet. Use it at your own risk.
  */
 export function presetFlowbite(options: PresetFlowbiteOptions = {}): Preset {
-  const { shortcuts = true } = options
+  const { shortcuts: enableShortcuts = true } = options
 
   return {
     name: 'unocss-preset-flowbite',
     preflights: [{ getCSS: getBaseStyle }],
 
-    shortcuts: shortcuts ? generateAlertShortcuts() : [],
+    shortcuts: enableShortcuts
+      ? [...shortcuts.alerts, ...shortcuts.badges, ...shortcuts.buttons]
+      : [],
   }
 }

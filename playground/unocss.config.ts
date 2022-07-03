@@ -8,15 +8,10 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
-import { presetFlowbite } from '@julr/unocss-preset-flowbite'
+import { presetFlowbite } from '../packages/unocss-preset-flowbite/src/index'
 
 export default defineConfig({
   theme: {
-    colors: {
-      blue: {
-        50: 'red',
-      },
-    },
     fontFamily: {
       sans: "'Inter', sans-serif",
       mono: "'Fira Code', monospace",

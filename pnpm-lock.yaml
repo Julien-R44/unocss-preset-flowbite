@@ -28,6 +28,7 @@ importers:
 
   packages/unocss-preset-flowbite:
     specifiers:
+      '@unocss/core': ^0.43.0
       mini-svg-data-uri: ^1.4.4
       unbuild: ^0.7.4
       unocss: ^0.43.0
@@ -35,6 +36,7 @@ importers:
     dependencies:
       mini-svg-data-uri: 1.4.4
     devDependencies:
+      '@unocss/core': 0.43.0
       unbuild: 0.7.4
       unocss: 0.43.0_vite@2.9.13
       vite: 2.9.13
@@ -42,10 +44,11 @@ importers:
   playground:
     specifiers:
       '@iconify/json': ^2.1.71
-      '@julr/unocss-preset-flowbite': workspace:*
+      '@julr/unocss-preset-flowbite': link:../packages/unocss-preset-flowbite
       '@types/node': ^18.0.0
       '@unocss/preset-icons': ^0.43.0
       '@unocss/reset': ^0.43.0
+      '@unocss/runtime': ^0.43.0
       '@unocss/vite': ^0.43.0
       '@vitejs/plugin-vue': ^2.3.3
       typescript: ^4.7.4
@@ -60,6 +63,7 @@ importers:
       '@types/node': 18.0.0
       '@unocss/preset-icons': 0.43.0
       '@unocss/reset': 0.43.0
+      '@unocss/runtime': 0.43.0
       '@unocss/vite': 0.43.0_vite@2.9.13
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.13+vue@3.2.37
       typescript: 4.7.4
@@ -846,6 +850,14 @@ packages:
 
   /@unocss/reset/0.43.0:
     resolution: {integrity: sha512-IRi/WUnyS8NxTplDHlcfM4nTjMwxY8Nee0IR01AWJhc82JQe6m3gCZSFXuo+T+szbhshhFeXnplbjAq1Wwm0kQ==}
+    dev: true
+
+  /@unocss/runtime/0.43.0:
+    resolution: {integrity: sha512-iUediTDyeiqmzcslJfsUPgThlHWtgdYZc8/cH9h5klHXaTOIh5zh+dpQBBB78mbZfWQyimZODmOJRs+axjBHKg==}
+    dependencies:
+      '@unocss/core': 0.43.0
+      '@unocss/preset-attributify': 0.43.0
+      '@unocss/preset-uno': 0.43.0
     dev: true
 
   /@unocss/scope/0.43.0:
