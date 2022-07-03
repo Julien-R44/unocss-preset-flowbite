@@ -1,7 +1,7 @@
 # unocss-preset-flowbite
 💅 An adaptation of the [Flowbite](https://flowbite.com/) Tailwind plugin for UnoCSS
 
-🚧 **Warning: The preset does not currently support all Flowbite features yet. Use this plugin at your own risk.** 
+🚧 **Warning: The preset does not currently support all Flowbite features yet. Use it at your own risk. And feel free to make PRs.** 
 
 # Installation
 ```
