@@ -1,5 +1,5 @@
-import type { Preset } from 'unocss'
 import svgToDataUri from 'mini-svg-data-uri'
+import type { Preset } from 'unocss'
 
 /**
  * Flowbite preset for UnoCSS.
