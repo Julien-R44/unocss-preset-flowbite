@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/8337858/188330855-83ab70fb-a736-488f-922e-60a3234056e5.png">
+</p>
+
 # unocss-preset-flowbite
 💅 An adaptation of the [Flowbite](https://flowbite.com/) Tailwind plugin for [UnoCSS](https://github.com/unocss/unocss)
 
