@@ -43,11 +43,11 @@
     "prepublishOnly": "pnpm build",
     "release": "bumpp --commit --push --tag && pnpm publish"
   },
-  "dependencies": {
-    "mini-svg-data-uri": "^1.4.4"
-  },
   "peerDependencies": {
     "unocss": ">= 0.31.13 < 1"
+  },
+  "dependencies": {
+    "mini-svg-data-uri": "^1.4.4"
   },
   "devDependencies": {
     "@julr/eslint-config": "^0.3.2",
@@ -71,18 +71,18 @@
     "arrowParens": "always",
     "printWidth": 100
   },
-  "eslintConfig": {
-    "extends": "@julr",
-    "rules": {
-      "n/no-unsupported-features/es-syntax": "off",
-      "n/no-missing-import": "off"
-    }
-  },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
         "@babel/core"
       ]
+    }
+  },
+  "eslintConfig": {
+    "extends": "@julr",
+    "rules": {
+      "n/no-unsupported-features/es-syntax": "off",
+      "n/no-missing-import": "off"
     }
   }
 }
