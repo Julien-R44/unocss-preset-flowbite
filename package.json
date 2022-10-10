@@ -1,6 +1,6 @@
 {
   "name": "@julr/unocss-preset-flowbite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@7.5.0",
   "description": "💅 An adaptation of the Flowbite Tailwind plugin for UnoCSS",
   "author": "Julien Ripouteau <julien@ripouteau.com>",
